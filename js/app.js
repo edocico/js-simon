@@ -31,9 +31,10 @@ playBtnDOMElement.addEventListener('click', function() {
                 console.log(randomNumberArray.includes(risposta))
             }
         }
+        // in base alla lunghezza dell'array so quanti numeri l'utente ha indovinato
         console.log(rispArray.length)
     }, 10000)
-    // in base alla lunghezza dell'array so quanti numeri l'utente ha indovinato
+    
     
 
 })
