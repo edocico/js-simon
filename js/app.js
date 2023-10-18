@@ -6,9 +6,9 @@ console.dir(numberDOMElement)
 const playBtnDOMElement = document.getElementById('play-btn')
 const timerDOMElement = document.querySelector('.timer')
 
-let timer = 0
-userNumberArray = []
-rispArray = []
+//let timer = 0
+//userNumberArray = []
+const rispArray = []
 
 playBtnDOMElement.addEventListener('click', function() {
     // genero un array di 5 numeri casuali
@@ -26,13 +26,15 @@ playBtnDOMElement.addEventListener('click', function() {
         for(let i = 0; i < 5; i++) {
             let risposta = parseInt(prompt('inserisci uno per uno i numeri che hai visto prima'))
             // se il numero della risposta è presente nell'array dei numeri generati lo pusho in un altro array
-            if (userNumberArray.includes(risposta)) {
+            if (randomNumberArray.includes(risposta)) {
                 rispArray.push(risposta)
+                console.log(randomNumberArray.includes(risposta))
             }
         }
-    }, 30000)
+        console.log(rispArray.length)
+    }, 10000)
     // in base alla lunghezza dell'array so quanti numeri l'utente ha indovinato
-    console.log(rispArray.length)
+    
 
 })
 
